@@ -18,7 +18,7 @@ app.use(async function(ctx, next) {
 app.use(async function(ctx, next) {
   if ('POST' != ctx.method) return await next();
 
-  const files = ctx.request.body.files.file;
+  const files = Array.isArray(ctx.request.body.files.file) ? ctx.request.body.files.file : [ctx.request.body.files.file];
   ctx.body = {
     sizes: files.reduce((o, file) => Object.assign(o, {[file.name]: file.size}), {}),
     files: files.length
@@ -26,6 +26,5 @@ app.use(async function(ctx, next) {
 });
 
 // listen
-
 app.listen(3000, () => console.log('listening on port 3000'));
 
