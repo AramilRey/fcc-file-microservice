@@ -1,7 +1,6 @@
 {
   "name": "metadata-microservice",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -17,5 +16,15 @@
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
     "koa-static": "^4.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AramilRey/fcc-file-microservice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AramilRey/fcc-file-microservice/issues"
+  },
+  "homepage": "https://github.com/AramilRey/fcc-file-microservice#readme",
+  "description": ""
 }
